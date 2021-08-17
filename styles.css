@@ -1,0 +1,19 @@
+header {
+    height: 60px;   
+    display: block;
+}
+div {
+    display: inline;
+}
+
+div a{
+    float: left;
+    margin: 0px 5px;
+    padding: 5px;
+}
+
+#main-logo {
+    width: 272px;
+    height: 92px;
+    object-fit: cover;
+}
