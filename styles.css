@@ -1,9 +1,16 @@
 body {
     margin: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
     height: 48px;
+    min-width: 100vw;
     padding: 6px;
     display: flex;
 }
@@ -38,13 +45,20 @@ header div.nav-left{
     justify-content: left;
 }
 
+
 header div.nav-right{
     font-size: 13px;
     justify-content: right;
 }
 
 main {
-    padding-top: 66px;
+    min-width: 100vw;
+    padding-top: 41px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #search-form {
@@ -72,7 +86,16 @@ main {
 #main-logo {
     width: 272px;
     height: 92px;
-    display: block;
-    margin: auto;
+    flex-grow: 0;
     object-fit: cover;
+}
+
+footer {
+    display: flex;
+    font-size: 14px;
+    background-color: rgb(34, 34, 34);
+}
+
+footer a {
+    padding: 15px;
 }
