@@ -5,7 +5,8 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
 header {
@@ -51,19 +52,23 @@ header div.nav-right{
     justify-content: right;
 }
 
-main {
-    min-width: 100vw;
-    padding-top: 41px;
-    min-height: 100%;
+
+#main-logo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-grow: 1;
     align-items: center;
+    min-height: 92px;
+    max-height: 290px;
+    justify-content: flex-end;
 }
 
+
 #search-form {
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    align-items: center;
     padding-top: 26px;
 }
 
@@ -71,8 +76,6 @@ main {
     width: auto;
     max-width: 584px;
     height: 44px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 5px 8px 0 16px;
     border: 1px solid #dfe1e5;
     border-radius: 24px; 
@@ -81,21 +84,31 @@ main {
 
 #searchbar {
     border: none;
-}
+}   
 
-#main-logo {
+#main-logo img {
     width: 272px;
     height: 92px;
-    flex-grow: 0;
     object-fit: cover;
 }
 
 footer {
+    flex-grow: 1;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
     font-size: 14px;
     background-color: rgb(34, 34, 34);
 }
 
-footer a {
+footer div a {
     padding: 15px;
+    color: grey;
 }
