@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
+    font-family: arial, sans-serif;
 }
 
 header {
@@ -26,7 +27,6 @@ header div a{
     margin: auto 5px;
     padding: 5px;
     display: block;
-    font-family: arial, sans-serif;
 }
 
 header div svg {
@@ -92,23 +92,45 @@ header div.nav-right{
     object-fit: cover;
 }
 
-footer {
+#bottom-third {
     flex-grow: 1;
+}
+
+footer {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 100vw;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: stretch;
+    background-color: #f2f2f2;  
 }
 
 footer div {
+    flex-basis: 100%;
+    flex-shrink: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
     font-size: 14px;
-    background-color: rgb(34, 34, 34);
+}
+
+#footer-left {
+    justify-content: flex-start;
+}   
+
+#footer-center {
+    justify-content: center;
+}
+
+#footer-right {
+    justify-content: flex-end;
 }
 
 footer div a {
+    text-decoration: none;
+    text-align: center;
     padding: 15px;
-    color: grey;
+    color: #70757a;
+}
+
+a:hover {
+    text-decoration: underline;
 }
