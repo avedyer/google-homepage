@@ -2,56 +2,73 @@ body {
     margin: 0;
     min-height: 100vh;
     max-height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     justify-content: flex-start;
     align-items: stretch;
     font-family: arial, sans-serif;
 }
 
 header {
-    height: 48px;
-    min-width: 100vw;
     padding: 6px;
     display: flex;
 }
 
 header div {
     display: flex;
-    width: 50%;
-    margin: auto 10px;
+    align-items: center;
 }
 
-header div a{
-    margin: auto 5px;
-    padding: 5px;
-    display: block;
+header a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.87);
 }
 
-header div svg {
-    height: 24px;
-    width: 24px;
-    padding: 12px !important;
+#header-left {
+    padding-left: 10px;
+    flex-grow: 1;
+    justify-content: flex-start;
 }
 
-header img {
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-}
-
-header div.nav-left{
+#header-left a {
     font-size: 14px;
-    justify-content: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
 }
 
+#header-icons {
+    flex-shrink: 1;
+    justify-content: flex-end;
+    padding-right: 4px;
+}
 
-header div.nav-right{
+#header-right {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+#header-right a {
     font-size: 13px;
-    justify-content: right;
+    padding-right: 15px;
 }
 
+#header-icons img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 100%;
+}
+
+#header-icons img:hover {
+    box-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+
+#google-apps {
+    opacity: 50%;
+}
 
 #main-logo {
     display: flex;
@@ -99,17 +116,21 @@ header div.nav-right{
 footer {
     padding-left: 15px;
     padding-right: 15px;
-    min-width: 100vw;
     display: flex;
-    justify-content: stretch;
-    background-color: #f2f2f2;  
+    background-color: #f2f2f2; 
+    flex-wrap: wrap;
+}
+
+footer::after {
+    content: '';
+    padding: 15px;
 }
 
 footer div {
-    flex-basis: 100%;
-    flex-shrink: 1;
+    flex-grow: 1;
     display: flex;
     font-size: 14px;
+    white-space: nowrap;
 }
 
 #footer-left {
